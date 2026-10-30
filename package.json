@@ -1,0 +1,44 @@
+{
+  "name": "common-ground",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:live": "vitest run --config vitest.live.config.ts",
+    "demo:e2e": "playwright test e2e/demo.spec.ts",
+    "demo:e2e:failures": "playwright test e2e/failures.spec.ts",
+    "demo:e2e:form": "playwright test e2e/form.spec.ts",
+    "demo:e2e:public": "playwright test e2e/public.spec.ts",
+    "demo:e2e:a11y": "playwright test e2e/a11y.spec.ts",
+    "demo:video": "node scripts/record_video.mjs",
+    "gate:build": "vitest run --config vitest.live.config.ts tests/candidate.live.test.ts"
+  },
+  "dependencies": {
+    "@upstash/redis": "1.39.0",
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.64.0",
+    "@types/node": "24.19.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.8",
+    "typescript": "5.9.3",
+    "vitest": "5.0.3"
+  }
+}

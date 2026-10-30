@@ -1,0 +1,47 @@
+# Secrets: keys live in the environment or in an ignored .env file (CLAUDE.md rule 7)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+out/
+.next/
+.vercel/
+.netlify/
+coverage/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Local tool state
+.claude/settings.local.json
+.claude/.stop-gate-count
+*.log
+.DS_Store
+
+# Next.js
+next-env.d.ts
+*.tsbuildinfo
+
+# Vercel CLI: project link, and the line `vercel link`/`vercel env pull` re-add whenever it is missing.
+# The exception after it keeps .env.example tracked.
+.vercel
+.env*
+!.env.example
+
+# Qloo response data, kept private. Qloo's guide (FAQ, read 2026-10-11): "Do not store Qloo response data in a public
+# repository". Raw responses from scripts/smoke_qloo.py live in .qloo/; the saved plan is deployed by the CLI from the
+# working folder but never committed.
+.qloo/
+public/saved-plan.json
+
+# Playwright output (the scripted run writes to .qloo/e2e-results; these are its defaults, in case)
+test-results/
+playwright-report/

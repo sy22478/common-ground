@@ -1,0 +1,12 @@
+# Files a CLI deploy must never upload. Vercel's own default list covers .env.local but NOT .env, so secrets are
+# listed here explicitly. check.sh fails if the .env lines are removed.
+.env
+.env.*
+.claude
+scripts
+tests
+*.log
+.qloo
+e2e
+playwright.config.ts
+submission

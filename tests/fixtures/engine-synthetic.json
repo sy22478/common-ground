@@ -1,0 +1,665 @@
+{
+ "recordedAt": "2026-10-11T04:24:56.120Z",
+ "note": "Real Nemotron replies; Qloo data is SYNTHETIC (tests/helpers.ts).",
+ "calls": [
+  {
+   "request": {
+    "model": "super",
+    "thinking": false,
+    "messages": 2
+   },
+   "result": {
+    "model": "super",
+    "content": "I'll start by searching for the favorites that are works/artists/places (skipping dishes/habits).",
+    "toolCalls": [
+     {
+      "id": "chatcmpl-tool-b91a91719e204c21",
+      "function": {
+       "arguments": "{\"query\": \"Pedro Infante\", \"type\": \"artist\", \"for\": \"grandparent\"}",
+       "name": "qloo_search"
+      },
+      "type": "function"
+     },
+     {
+      "id": "chatcmpl-tool-8454a087e4a037ec",
+      "function": {
+       "arguments": "{\"query\": \"Roman Holiday\", \"type\": \"movie\", \"for\": \"grandparent\"}",
+       "name": "qloo_search"
+      },
+      "type": "function"
+     },
+     {
+      "id": "chatcmpl-tool-89c49fbc39bfc8e3",
+      "function": {
+       "arguments": "{\"query\": \"Javier Solis\", \"type\": \"artist\", \"for\": \"grandparent\"}",
+       "name": "qloo_search"
+      },
+      "type": "function"
+     },
+     {
+      "id": "chatcmpl-tool-a79b8b68c87cfe94",
+      "function": {
+       "arguments": "{\"query\": \"Bad Bunny\", \"type\": \"artist\", \"for\": \"visitor\"}",
+       "name": "qloo_search"
+      },
+      "type": "function"
+     },
+     {
+      "id": "chatcmpl-tool-800489aa24cffab8",
+      "function": {
+       "arguments": "{\"query\": \"Spirited Away\", \"type\": \"movie\", \"for\": \"visitor\"}",
+       "name": "qloo_search"
+      },
+      "type": "function"
+     }
+    ],
+    "finishReason": "tool_calls",
+    "usage": {
+     "completion_tokens": 259,
+     "prompt_tokens": 1790,
+     "total_tokens": 2049,
+     "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+     },
+     "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+     },
+     "prompt_cache_hit_tokens": 0,
+     "prompt_cache_miss_tokens": 1790
+    },
+    "costUsd": 0.0007701,
+    "ms": 1589
+   }
+  },
+  {
+   "request": {
+    "model": "super",
+    "thinking": false,
+    "messages": 8
+   },
+   "result": {
+    "model": "super",
+    "content": "Now I'll get insights for both people using their IDs.",
+    "toolCalls": [
+     {
+      "id": "chatcmpl-tool-b7518188ac3a8240",
+      "function": {
+       "arguments": "{\"for\": \"grandparent\", \"type\": \"movie\", \"entity_ids\": [\"Q-PI\", \"Q-RH\", \"Q-JS\"], \"release_year_min\": 1950, \"release_year_max\": 1970, \"age\": \"55_and_older\", \"take\": 5}",
+       "name": "qloo_insights"
+      },
+      "type": "function"
+     },
+     {
+      "id": "chatcmpl-tool-9328523c48457f07",
+      "function": {
+       "arguments": "{\"for\": \"grandparent\", \"type\": \"artist\", \"entity_ids\": [\"Q-PI\", \"Q-RH\", \"Q-JS\"], \"age\": \"55_and_older\", \"take\": 5}",
+       "name": "qloo_insights"
+      },
+      "type": "function"
+     },
+     {
+      "id": "chatcmpl-tool-95042cff33bf08f3",
+      "function": {
+       "arguments": "{\"for\": \"visitor\", \"type\": \"movie\", \"entity_ids\": [\"Q-BB\", \"Q-SA\"], \"take\": 5}",
+       "name": "qloo_insights"
+      },
+      "type": "function"
+     },
+     {
+      "id": "chatcmpl-tool-915a558c24f3e648",
+      "function": {
+       "arguments": "{\"for\": \"visitor\", \"type\": \"artist\", \"entity_ids\": [\"Q-BB\", \"Q-SA\"], \"take\": 5}",
+       "name": "qloo_insights"
+      },
+      "type": "function"
+     }
+    ],
+    "finishReason": "tool_calls",
+    "usage": {
+     "completion_tokens": 343,
+     "prompt_tokens": 2230,
+     "total_tokens": 2573,
+     "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+     },
+     "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+     },
+     "prompt_cache_hit_tokens": 0,
+     "prompt_cache_miss_tokens": 2230
+    },
+    "costUsd": 0.0009777,
+    "ms": 1730
+   }
+  },
+  {
+   "request": {
+    "model": "super",
+    "thinking": false,
+    "messages": 13
+   },
+   "result": {
+    "model": "super",
+    "content": "Now I'll compare their tastes and search for a San Antonio event.",
+    "toolCalls": [
+     {
+      "id": "chatcmpl-tool-a4ca8e81afe3d484",
+      "function": {
+       "arguments": "{\"grandparent_ids\": [\"Q-PI\", \"Q-RH\", \"Q-JS\"], \"visitor_ids\": [\"Q-BB\", \"Q-SA\"]}",
+       "name": "qloo_compare"
+      },
+      "type": "function"
+     },
+     {
+      "id": "chatcmpl-tool-905e1469c5a33428",
+      "function": {
+       "arguments": "{\"query\": \"San Antonio Texas October 2026 music film cultural events Pedro Infante Javier Solis Bad Bunny Spirited Away\"}",
+       "name": "web_search"
+      },
+      "type": "function"
+     }
+    ],
+    "finishReason": "tool_calls",
+    "usage": {
+     "completion_tokens": 120,
+     "prompt_tokens": 2882,
+     "total_tokens": 3002,
+     "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+     },
+     "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+     },
+     "prompt_cache_hit_tokens": 0,
+     "prompt_cache_miss_tokens": 2882
+    },
+    "costUsd": 0.0009726,
+    "ms": 1176
+   }
+  },
+  {
+   "request": {
+    "model": "super",
+    "thinking": false,
+    "messages": 16
+   },
+   "result": {
+    "model": "super",
+    "content": "done",
+    "toolCalls": [],
+    "finishReason": "stop",
+    "usage": {
+     "completion_tokens": 2,
+     "prompt_tokens": 3113,
+     "total_tokens": 3115,
+     "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+     },
+     "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+     },
+     "prompt_cache_hit_tokens": 0,
+     "prompt_cache_miss_tokens": 3113
+    },
+    "costUsd": 0.0009356999999999999,
+    "ms": 499
+   }
+  },
+  {
+   "request": {
+    "model": "ultra",
+    "thinking": false,
+    "messages": 2
+   },
+   "result": {
+    "model": "ultra",
+    "content": "{\n  \"bridge\": {\n    \"title\": \"Pedro Infante\",\n    \"kind\": \"artist\",\n    \"why\": \"{grandparent} treasures his golden‑age rancheras and boleros, and {visitor} will hear the same guitar‑driven romance that echoes in today’s Latin pop.\",\n    \"evidence\": [\"E1\", \"E2\", \"E11\"]\n  },\n  \"moments\": [\n    {\n      \"title\": \"Pedro Infante\",\n      \"kind\": \"song\",\n      \"what_to_do\": \"Play a bolero like \\\"Amorcito corazón\\\" and let the guitar intro fill the kitchen while you set out the masa.\",\n      \"evidence\": [\"E2\", \"E11\"]\n    },\n    {\n      \"title\": \"Sabrina\",\n      \"kind\": \"film\",\n      \"what_to_do\": \"Queue this 1954 Mexican comedy‑drama for a cozy movie night with subtitles on.\",\n      \"evidence\": [\"E7\"]\n    },\n    {\n      \"title\": \"making tamales at Christmas\",\n      \"kind\": \"dish\",\n      \"what_to_do\": \"Steam a batch of {grandparent}'s Christmas tamales together, sharing stories as you fold each husk.\",\n      \"evidence\": [\"E1\"]\n    },\n    {\n      \"title\": \"CineFestival at Guadalupe Cultural Arts Center\",\n      \"kind\": \"event\",\n      \"what_to_do\": \"Check the festival page for classic Mexican film screenings and go if the schedule fits; verify dates before you head out.\",\n      \"evidence\": [\"E12\"]\n    },\n    {\n      \"title\": \"baking\",\n      \"kind\": \"activity\",\n      \"what_to_do\": \"Pick a simple sweet bread or cookie recipe and bake side by side, letting the oven warm the afternoon.\",\n      \"evidence\": [\"E1\"]\n    }\n  ],\n  \"questions\": [\n    \"What memory comes up when you hear Pedro Infante's voice?\",\n    \"Which film from your youth still makes you laugh or cry?\",\n    \"What is the first thing you taught yourself to bake?\"\n  ]\n}",
+    "toolCalls": [],
+    "finishReason": "stop",
+    "usage": {
+     "completion_tokens": 455,
+     "prompt_tokens": 1206,
+     "total_tokens": 1661,
+     "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+     },
+     "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "multimodal_tokens": null
+     },
+     "prompt_cache_hit_tokens": 0,
+     "prompt_cache_miss_tokens": 1206
+    },
+    "costUsd": 0.002571,
+    "ms": 2098
+   }
+  },
+  {
+   "request": {
+    "model": "ultra",
+    "thinking": false,
+    "messages": 2
+   },
+   "result": {
+    "model": "ultra",
+    "content": "[\"¿Qué recuerdo te viene a la mente cuando escuchas la voz de Pedro Infante?\", \"¿Qué película de tu juventud aún te hace reír o llorar?\", \"¿Cuál fue la primera cosa que te enseñaste a hornear tú sola?\"]",
+    "toolCalls": [],
+    "finishReason": "stop",
+    "usage": {
+     "completion_tokens": 56,
+     "prompt_tokens": 150,
+     "total_tokens": 206,
+     "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+     },
+     "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "multimodal_tokens": null
+     },
+     "prompt_cache_hit_tokens": 0,
+     "prompt_cache_miss_tokens": 150
+    },
+    "costUsd": 0.000318,
+    "ms": 711
+   }
+  }
+ ],
+ "events": [
+  {
+   "type": "step",
+   "text": "Looking up their favorites in Qloo"
+  },
+  {
+   "type": "tool",
+   "name": "qloo_search",
+   "ok": true,
+   "summary": "Qloo search \"Pedro Infante\" (artist): Pedro Infante",
+   "evidence": "E2",
+   "names": [
+    "Pedro Infante"
+   ]
+  },
+  {
+   "type": "tool",
+   "name": "qloo_search",
+   "ok": true,
+   "summary": "Qloo search \"Roman Holiday\" (movie): Roman Holiday",
+   "evidence": "E3",
+   "names": [
+    "Roman Holiday"
+   ]
+  },
+  {
+   "type": "tool",
+   "name": "qloo_search",
+   "ok": true,
+   "summary": "Qloo search \"Javier Solis\" (artist): Javier Solís",
+   "evidence": "E4",
+   "names": [
+    "Javier Solís"
+   ]
+  },
+  {
+   "type": "tool",
+   "name": "qloo_search",
+   "ok": true,
+   "summary": "Qloo search \"Bad Bunny\" (artist): Bad Bunny",
+   "evidence": "E5",
+   "names": [
+    "Bad Bunny"
+   ]
+  },
+  {
+   "type": "tool",
+   "name": "qloo_search",
+   "ok": true,
+   "summary": "Qloo search \"Spirited Away\" (movie): Spirited Away",
+   "evidence": "E6",
+   "names": [
+    "Spirited Away"
+   ]
+  },
+  {
+   "type": "tool",
+   "name": "qloo_insights",
+   "ok": true,
+   "summary": "Qloo movie insights for the grandparent, 1950-1970: Nosotros los pobres, Sabrina, A toda máquina",
+   "evidence": "E7",
+   "names": [
+    "Nosotros los pobres",
+    "Sabrina",
+    "A toda máquina"
+   ]
+  },
+  {
+   "type": "tool",
+   "name": "qloo_insights",
+   "ok": true,
+   "summary": "Qloo artist insights for the grandparent: Nosotros los pobres, Sabrina, A toda máquina",
+   "evidence": "E8",
+   "names": [
+    "Nosotros los pobres",
+    "Sabrina",
+    "A toda máquina"
+   ]
+  },
+  {
+   "type": "tool",
+   "name": "qloo_insights",
+   "ok": true,
+   "summary": "Qloo movie insights for the visitor: Kiki's Delivery Service, Natalia Lafourcade",
+   "evidence": "E9",
+   "names": [
+    "Kiki's Delivery Service",
+    "Natalia Lafourcade"
+   ]
+  },
+  {
+   "type": "tool",
+   "name": "qloo_insights",
+   "ok": true,
+   "summary": "Qloo artist insights for the visitor: Kiki's Delivery Service, Natalia Lafourcade",
+   "evidence": "E10",
+   "names": [
+    "Kiki's Delivery Service",
+    "Natalia Lafourcade"
+   ]
+  },
+  {
+   "type": "tool",
+   "name": "qloo_compare",
+   "ok": true,
+   "summary": "Qloo compare, what they share: Bolero, Family, Guitar",
+   "evidence": "E11"
+  },
+  {
+   "type": "tool",
+   "name": "web_search",
+   "ok": true,
+   "summary": "Web: CineFestival at Guadalupe Cultural Arts Center",
+   "evidence": "E12",
+   "names": [
+    "CineFestival at Guadalupe Cultural Arts Center"
+   ]
+  },
+  {
+   "type": "step",
+   "text": "Writing the visit plan"
+  },
+  {
+   "type": "step",
+   "text": "Left out one suggestion that did not pass the checks"
+  },
+  {
+   "type": "bridge",
+   "bridge": {
+    "title": "Pedro Infante",
+    "kind": "artist",
+    "evidence": [
+     "E1",
+     "E2",
+     "E11"
+    ],
+    "why": "{grandparent} treasures his golden‑age rancheras and boleros, and {visitor} will hear the same guitar‑driven romance that echoes in today’s Latin pop."
+   },
+   "evidence": [
+    {
+     "id": "E1",
+     "source": "family",
+     "label": "In the family's own words",
+     "urls": []
+    },
+    {
+     "id": "E2",
+     "source": "qloo",
+     "label": "Qloo search \"Pedro Infante\" (artist)",
+     "urls": []
+    },
+    {
+     "id": "E3",
+     "source": "qloo",
+     "label": "Qloo search \"Roman Holiday\" (movie)",
+     "urls": []
+    },
+    {
+     "id": "E4",
+     "source": "qloo",
+     "label": "Qloo search \"Javier Solis\" (artist)",
+     "urls": []
+    },
+    {
+     "id": "E5",
+     "source": "qloo",
+     "label": "Qloo search \"Bad Bunny\" (artist)",
+     "urls": []
+    },
+    {
+     "id": "E6",
+     "source": "qloo",
+     "label": "Qloo search \"Spirited Away\" (movie)",
+     "urls": []
+    },
+    {
+     "id": "E7",
+     "source": "qloo",
+     "label": "Qloo movie insights for the grandparent, 1950-1970",
+     "urls": []
+    },
+    {
+     "id": "E8",
+     "source": "qloo",
+     "label": "Qloo artist insights for the grandparent",
+     "urls": []
+    },
+    {
+     "id": "E9",
+     "source": "qloo",
+     "label": "Qloo movie insights for the visitor",
+     "urls": []
+    },
+    {
+     "id": "E10",
+     "source": "qloo",
+     "label": "Qloo artist insights for the visitor",
+     "urls": []
+    },
+    {
+     "id": "E11",
+     "source": "qloo",
+     "label": "Qloo compare, what their two tastes share",
+     "urls": []
+    },
+    {
+     "id": "E12",
+     "source": "tavily",
+     "label": "Web search \"San Antonio Texas October 2026 music film cultural events Pedro Infante Javier Solis Bad Bunny Spirited Away\"",
+     "urls": [
+      "https://example.org/cinefestival"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "step",
+   "text": "Putting the questions in Spanish"
+  },
+  {
+   "type": "plan",
+   "plan": {
+    "bridge": {
+     "title": "Pedro Infante",
+     "kind": "artist",
+     "evidence": [
+      "E1",
+      "E2",
+      "E11"
+     ],
+     "why": "{grandparent} treasures his golden‑age rancheras and boleros, and {visitor} will hear the same guitar‑driven romance that echoes in today’s Latin pop."
+    },
+    "moments": [
+     {
+      "title": "Sabrina",
+      "kind": "film",
+      "evidence": [
+       "E7"
+      ],
+      "what_to_do": "Queue this 1954 Mexican comedy‑drama for a cozy movie night with subtitles on."
+     },
+     {
+      "title": "making tamales at Christmas",
+      "kind": "dish",
+      "evidence": [
+       "E1"
+      ],
+      "what_to_do": "Steam a batch of {grandparent}'s Christmas tamales together, sharing stories as you fold each husk."
+     },
+     {
+      "title": "CineFestival at Guadalupe Cultural Arts Center",
+      "kind": "event",
+      "evidence": [
+       "E12"
+      ],
+      "what_to_do": "Check the festival page for classic Mexican film screenings and go if the schedule fits; verify dates before you head out."
+     },
+     {
+      "title": "baking",
+      "kind": "activity",
+      "evidence": [
+       "E1"
+      ],
+      "what_to_do": "Pick a simple sweet bread or cookie recipe and bake side by side, letting the oven warm the afternoon."
+     }
+    ],
+    "questions": [
+     {
+      "native": "¿Qué recuerdo te viene a la mente cuando escuchas la voz de Pedro Infante?",
+      "english": "What memory comes up when you hear Pedro Infante's voice?"
+     },
+     {
+      "native": "¿Qué película de tu juventud aún te hace reír o llorar?",
+      "english": "Which film from your youth still makes you laugh or cry?"
+     },
+     {
+      "native": "¿Cuál fue la primera cosa que te enseñaste a hornear tú sola?",
+      "english": "What is the first thing you taught yourself to bake?"
+     }
+    ],
+    "language": "Spanish",
+    "evidence": [
+     {
+      "id": "E1",
+      "source": "family",
+      "label": "In the family's own words",
+      "urls": []
+     },
+     {
+      "id": "E2",
+      "source": "qloo",
+      "label": "Qloo search \"Pedro Infante\" (artist)",
+      "urls": []
+     },
+     {
+      "id": "E3",
+      "source": "qloo",
+      "label": "Qloo search \"Roman Holiday\" (movie)",
+      "urls": []
+     },
+     {
+      "id": "E4",
+      "source": "qloo",
+      "label": "Qloo search \"Javier Solis\" (artist)",
+      "urls": []
+     },
+     {
+      "id": "E5",
+      "source": "qloo",
+      "label": "Qloo search \"Bad Bunny\" (artist)",
+      "urls": []
+     },
+     {
+      "id": "E6",
+      "source": "qloo",
+      "label": "Qloo search \"Spirited Away\" (movie)",
+      "urls": []
+     },
+     {
+      "id": "E7",
+      "source": "qloo",
+      "label": "Qloo movie insights for the grandparent, 1950-1970",
+      "urls": []
+     },
+     {
+      "id": "E8",
+      "source": "qloo",
+      "label": "Qloo artist insights for the grandparent",
+      "urls": []
+     },
+     {
+      "id": "E9",
+      "source": "qloo",
+      "label": "Qloo movie insights for the visitor",
+      "urls": []
+     },
+     {
+      "id": "E10",
+      "source": "qloo",
+      "label": "Qloo artist insights for the visitor",
+      "urls": []
+     },
+     {
+      "id": "E11",
+      "source": "qloo",
+      "label": "Qloo compare, what their two tastes share",
+      "urls": []
+     },
+     {
+      "id": "E12",
+      "source": "tavily",
+      "label": "Web search \"San Antonio Texas October 2026 music film cultural events Pedro Infante Javier Solis Bad Bunny Spirited Away\"",
+      "urls": [
+       "https://example.org/cinefestival"
+      ]
+     }
+    ],
+    "costUsd": 0.006545
+   }
+  },
+  {
+   "type": "done",
+   "costUsd": 0.006545,
+   "ms": 7818
+  }
+ ]
+}
